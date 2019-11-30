@@ -9,6 +9,7 @@
   "author": "Iván <ivanoviicrm@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@hapi/joi": "^16.1.8",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
