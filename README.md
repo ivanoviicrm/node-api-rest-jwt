@@ -62,6 +62,6 @@ Código libre, siente libre de utilizarlo si así lo deseas. Aunque una mención
 ### ✒️ Autor
 Iván Rodríguez Montero - Desarrollador web.
 ```
-***GITHUB***: https://github.com/ivanoviicrm/
-***LINKEDIN***: https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-montero-040627181/
+https://github.com/ivanoviicrm/
+https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-montero-040627181/
 ```
