@@ -1,7 +1,7 @@
 # 🚀 node-api-rest-jwt 🚀
 
 Aplicación creada para aprender express.js y sobre todo autorización y autenticación mediante el uso de tokens.
-Se puede emplear como base o punto de inicio para levantar una aplicación rest con Node.js-
+Se puede emplear como base o punto de inicio para levantar una aplicación rest con Node.js
 
 ### 📦 Librerias, Frameworks, paquetes empleados:
 
