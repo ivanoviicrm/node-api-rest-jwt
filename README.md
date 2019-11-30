@@ -47,7 +47,9 @@ _En la carpeta ***middlewares*** encontraremos el archivo ***verifyToken.js***, 
 _En ***models*** encontraremos el archivo ***User.js*** el cual es un modelo / schema de usuarios para la base de datos noSQL de MongoDB._
 
 _En ***routes*** se almacenan las distintas rutas a las que la api da respuesta._
+
 _***private*** son rutas a las que será necesario aporta un token para poder tener acceso a ellas, mientras que ***public*** serán todas aquellas en las que no sea necesario un token_
+
 _En ***auth.js*** encontraremos dos rutas para el registro de usuario, o logueo_
 
 _En ***validations*** se encontrarán los schemas empleados para la validación con ***Joi** (https://github.com/hapijs/joi)_
