@@ -1,8 +1,9 @@
 # 🚀 node-api-rest-jwt 🚀
 
 Aplicación creada para aprender express.js y sobre todo autorización y autenticación mediante el uso de tokens.
+Se puede emplear como base o punto de inicio para levantar una aplicación rest con Node.js-
 
-### Librerias, Frameworks, paquetes empleados:
+### 📦 Librerias, Frameworks, paquetes empleados:
 
 ```
 @hapi/joi - Validación de campos
@@ -14,7 +15,7 @@ mongoose - Conectividad sencilla con MongoDB
 ```
 
 
-### Arquitectura:
+### 🛠️ Arquitectura:
 
 ```
 src
@@ -36,7 +37,7 @@ src
    |_ validations
    |    |_ auth.js
    |
-   |_ app.js
+   |_ app.js 📌
 ```
 
 _Dentro de la carpeta ***src*** se encuentra todo el codigo, a excepción de los archivos típicos de configuración._
@@ -52,3 +53,11 @@ _En ***auth.js*** encontraremos dos rutas para el registro de usuario, o logueo_
 _En ***validations*** se encontrarán los schemas empleados para la validación con ***Joi** (https://github.com/hapijs/joi)_
 
 _***app.js*** es el archivo principal de nuestra aplicación, y del cual arrancará node._
+
+### 📄 Licencia 
+Código libre, siente libre de utilizarlo si así lo deseas. Aunque una mención no estaría de más! 🤓
+
+### ✒️ Autor
+Iván Rodríguez Montero - Desarrollador web
+***GITHUB***: https://github.com/ivanoviicrm/
+***LINKEDIN***: https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-montero-040627181/
