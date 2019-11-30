@@ -2,6 +2,18 @@
 
 Aplicación creada para aprender express.js y sobre todo autorización y autenticación mediante el uso de tokens.
 
+### Librerias, Frameworks, paquetes empleados:
+
+```
+@hapi/joi - Validación de campos
+bcryptjs - Encriptación y Desencriptación
+dotenv - Archivo de configuración (variables)
+express - Framework web
+jsonwebtoken - Autorización y autenticación mediante tokens.
+mongoose - Conectividad sencilla con MongoDB
+```
+
+
 ### Arquitectura:
 
 ```
