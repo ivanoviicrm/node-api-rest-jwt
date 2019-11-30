@@ -26,3 +26,7 @@ src
    |
    |_ app.js
 ```
+
+_Dentro de la carpeta ***src*** se encuentra todo el codigo, a excepción de los archivos típicos de configuración.
+_En la carpeta ***middlewares*** encontraremos el archivo ****verifyToken.js***, que consiste en una función de middleware que utilizaremos para validar los tokens en las distintas peticiones que nos haga el cliente. Denegando el acceso sin token a las rutas dentro de la carpeta ***routes/private***
+_En ***models*** encontraremos el archivo ***User.js*** el cual es un modelo / schema de usuarios para la base de datos noSQL de MongoDB.
