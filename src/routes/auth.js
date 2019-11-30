@@ -1,12 +1,13 @@
 const router = require('express').Router();
-const userModel = require('../../models/User');
+const userModel = require('../models/User');
+const dotenv = require('dotenv').config();
 const Joi = require('@hapi/joi');
-const { registerValidationsSchema, loginValidationsSchema } = require('../../validations/auth');
+const jwt = require('jsonwebtoken');
+const { registerValidationsSchema, loginValidationsSchema } = require('../validations/auth');
 const bcrypt = require('bcryptjs');
 
 // URL -> http://localhost:PORT/api/v1/register
 router.post('/register', async (req, res) => {
-    
     // Validating the data
     const validation = registerValidationsSchema.validate(req.body);
     if (validation.error) {
@@ -54,8 +55,46 @@ router.post('/register', async (req, res) => {
  
 
 // URL -> http://localhost:PORT/api/v1/login
-router.get('/login', (req, res) => {
-  res.status(200).json({ message: 'Connected!' });
+router.post('/login', async (req, res) => {
+   // Validating the data
+   const validation = loginValidationsSchema.validate(req.body);
+   if (validation.error) {
+     return res.status(400).send(validation.error.details[0].message);
+   }
+
+    // Check if user exists (email/pass method for login)
+    try {
+      const user = await userModel.findOne({ email: req.body.email });
+      if (!user) {
+        return res.status(400).send('Invalid email!');
+      }
+
+      // Checking if password matches
+      try {
+        const validPass = await bcrypt.compare(req.body.password, user.password);
+        if (!validPass) {
+          return res.status(400).send('Invalid password!');
+        }
+
+        // Create and assign a token -> LOGGED IN SUCCESSFULY
+        const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET);
+        res.header(process.env.JWT_HEADER_NAME, token).status(200).send({
+          status: "successful",
+          message: "Logged in!",
+          token: token
+        });
+
+      } catch (error) { // ERROR 005
+        console.log('IRM(005) -> An internal error has occurred while decrypting password when someone was trying to login.', error);
+        return res.status(400).send('An internal error has occurred, please try again later (005)');
+      }
+
+    } catch (error) { // ERROR 004
+      console.log('IRM(004) -> An internal error has occurred while checking if email exists when someone was trying to login.', error);
+      return res.status(400).send('An internal error has occurred, please try again later (004)');
+    }
+
+
 });
 
 module.exports = router;

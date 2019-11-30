@@ -1,12 +1,14 @@
 {
   "name": "node-api-rest-jwt",
   "version": "1.0.0",
+  "description": "Basic APIRest with jwt authorization & Joi validation",
   "main": "./src/app.js",
   "scripts": {
     "start": "nodemon ./src/app.js"
   },
   "repository": "https://github.com/ivanoviicrm/node-api-rest-jwt.git",
-  "author": "Iván <ivanoviicrm@gmail.com>",
+  "author": "Iván Rodríguez",
+  "email": "ivanoviicrm@gmail.com | ivan.rodriguez.montero@gmail.com",
   "license": "MIT",
   "dependencies": {
     "@hapi/joi": "^16.1.8",

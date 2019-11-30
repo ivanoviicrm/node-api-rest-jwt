@@ -3,7 +3,9 @@ const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-const authRoutes = require('./routes/auth/auth');
+const authRoute = require('./routes/auth');
+const profileRoute = require('./routes/private/profile');
+const indexRoute = require('./routes/public/index');
 
 // CONFIG VARIABLES
 dotenv.config();
@@ -19,7 +21,9 @@ mongoose.connect(
 app.use(express.json());
 
 // ROUTES
-app.use('/api/v1', authRoutes);
+app.use('/api/v1', authRoute);
+app.use('/api/v1/profile', profileRoute);
+app.use('/api/v1/index', indexRoute);
 
 app.listen(process.env.APP_PORT, () => {
   console.log(`Application '${process.env.APP_NAME}' is running in development mode on http://localhost:${process.env.APP_PORT} ...`);
