@@ -60,6 +60,8 @@ _***app.js*** es el archivo principal de nuestra aplicación, y del cual arranca
 Código libre, siente libre de utilizarlo si así lo deseas. Aunque una mención no estaría de más! 🤓
 
 ### ✒️ Autor
-Iván Rodríguez Montero - Desarrollador web
+Iván Rodríguez Montero - Desarrollador web.
+```
 ***GITHUB***: https://github.com/ivanoviicrm/
 ***LINKEDIN***: https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-montero-040627181/
+```
