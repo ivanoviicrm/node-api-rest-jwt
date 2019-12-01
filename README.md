@@ -3,7 +3,7 @@
 Aplicación creada para aprender express.js y sobre todo autorización y autenticación mediante el uso de tokens.
 Se puede emplear como base o punto de inicio para levantar una aplicación rest con Node.js
 
-* Ten cuidado de añadir en .gitignore el archivo .env para no subirlo a un repositorio público en caso de que tu aplicación vaya más allá del mero hecho de ser para aprender.
+* Ten cuidado de añadir en ***.gitignore*** el archivo ***.env*** para no subirlo a un repositorio público en caso de que tu aplicación vaya más allá del mero hecho de ser para aprender.
 
 
 ### 📦 Librerias, Frameworks, paquetes empleados:
